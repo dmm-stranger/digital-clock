@@ -33,6 +33,11 @@ body {
 	color: tomato;
 }
 
+#day {
+	color: rgb(255, 73, 41);
+	opacity: 0.7;
+}
+
 .clock p {
 	color: #ffffff;
 	font-size: 1em;
