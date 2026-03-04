@@ -30,7 +30,6 @@ body {
 
 .clock {
 	font-size: 4em;
-	color: tomato;
 }
 
 #day {
@@ -44,7 +43,11 @@ body {
 	font-weight: lighter !important;
 }
 
-.clock span {
+.clock span:first-child {
+	color: tomato;
+}
+
+.clock span:last-child {
 	color: #ffffff;
 	font-weight: normal;
 }

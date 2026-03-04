@@ -12,18 +12,19 @@ function updateClock() {
 	minutes = minutes.toString().padStart(2, '0');
 	seconds = seconds.toString().padStart(2, '0');
 
-	let formattedTimeString = `${hours} : ${minutes} : ${seconds} ${ampm}`;
+	let formattedTimeString = `${hours} : ${minutes} : ${seconds}`;
+	const dayName = localDate.toLocaleDateString(undefined, { weekday: 'long' });
+	const day = String(localDate.getDate()).padStart(2, '0');
+	const month = String(localDate.getMonth() + 1).padStart(2, '0'); // Month starts from 0
+	const year = localDate.getFullYear();
 
-	let options = {
-		weekday: 'long',
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-	};
-	let dateString = localDate.toLocaleDateString(undefined, options);
+	let formattedDate = `${day} / ${month} / ${year}`;
 
-	document.getElementById('lol').innerText = formattedTimeString;
-	document.getElementById('pol').innerText = dateString;
+	document.getElementById('clock').innerHTML = formattedTimeString;
+	document.getElementById('ampm').innerHTML = ampm;
+	document.getElementById('day').innerHTML = dayName;
+	document.getElementById('date').innerHTML = formattedDate;
 }
 
 setInterval(updateClock, 1000);
+updateClock();
