@@ -2,4 +2,4 @@
 
 ![Banner: Digital Clock](files/banner.png)
 
-## test commit message.
+## test commit message msg.
